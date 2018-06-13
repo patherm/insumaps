@@ -30,7 +30,7 @@ gem 'devise'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'compass-rails','~> 3.0.2'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+#gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -59,4 +59,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'coffee-script-source', '1.8.0'
-gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
+#gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
