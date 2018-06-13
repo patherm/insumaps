@@ -1,0 +1,23 @@
+<div class="container">
+<div class="jumbotron">
+<article>
+ 	<header>
+ 		<p><h1><%= @cidade.nome %></h1></p>
+ 		<p><h1><%= @cidade.uf %></h1></p>
+ 	</header>
+ </article>
+</div>
+
+<%= link_to cidades_path, class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-home"> Voltar</i>
+<% end %>
+
+<%= link_to edit_cidade_path(@cidade), class:'btn btn-link' do %>
+	<i class="glyphicon glyphicon-edit"> Editar</i>
+<% end %>
+
+ <%= link_to cidade_path(@cidade), method: :delete, data:{confirm: "Deseja deletar essa cidade?"}, class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-remove-sign"> Deletar</i>
+ <% end %>
+
+</div>

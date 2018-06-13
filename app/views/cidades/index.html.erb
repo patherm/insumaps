@@ -1,0 +1,27 @@
+<center>
+<div class="container-fluid">
+	<% if @cidades.size > 0 %>
+		<div class="col-md-10">
+	 		<h2>Cidades Cadastradas</h2>
+		</div>
+		<div class="col-md-10">
+			<% @cidades.each do |cidade| %>
+				<div class="span6">
+					<p><h3 class="text-left"><%= link_to cidade.nome, cidade %></h3></p>
+		 			<!-- <h3>Uf: <%= cidade.uf %></h3> -->
+				</div>
+			<% end %>
+		</div>
+	<% else %>
+		<div class="jumbotron">
+			<h3>Não há cidades cadastradas!</h3>
+		</div>
+	<% end %>
+		<div class="col-md-8">
+			<p><%= link_to admin_path, class:'btn btn-link' do %>
+	 			<i class="glyphicon glyphicon-home"> Voltar</i>
+				<% end %>
+			</p>
+		</div>
+</div>
+</center>

@@ -1,0 +1,18 @@
+<%= form_for(@cidade) do |f| %>
+
+<%= render 'layouts/errors' , object: @cidade %>
+	
+<p class="form-group">
+	<%= f.label :Nome %></br>
+	<%= f.text_field :nome, class:"form-control" %>
+</p>
+<p class="form-group">
+	<%= f.label :UF %></br>
+	<%= f.select :uf, Cidade::UF, prompt: 'Escolha o Estado', class:"form-control" %>
+</p>
+<p>
+	<%= f.submit class:'btn btn-primary' %>
+	<%= link_to 'Cancelar', admin_path, class: 'btn btn-default' %>
+</p>
+
+<% end %>
