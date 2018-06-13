@@ -191,6 +191,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   coffee-rails (~> 4.2)
+  coffee-script-source (~> 1.12, >= 1.12.2)
   compass-rails (~> 3.0.2)
   devise
   duktape
