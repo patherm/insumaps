@@ -29,6 +29,7 @@ gem 'devise'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'compass-rails','~> 3.0.2'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
