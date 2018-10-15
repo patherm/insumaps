@@ -1,0 +1,26 @@
+<div class="container">
+<div class="jumbotron">
+<article>
+ 	<header>
+ 		<p><h1>Tag</h1></p>
+ 	</header>
+ </article>
+</div>
+
+<%= link_to new_cidade_distribuidora_path(@cidade), class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-tower"> Cadastrar Distribuidora</i>
+<% end %>
+
+<%= link_to cidades_path, class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-home"> Voltar</i>
+<% end %>
+
+<%= link_to edit_cidade_distribuidora_path(@cidade), class:'btn btn-link' do %>
+	<i class="glyphicon glyphicon-edit"> Editar</i>
+<% end %>
+
+ <%= link_to cidade_distribuidora_path(@cidade), method: :delete, data:{confirm: "Deseja deletar essa Distribuidora?"}, class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-remove-sign"> Deletar</i>
+ <% end %>
+
+</div>

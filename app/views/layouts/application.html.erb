@@ -3,13 +3,25 @@
   <head>
     <title>ADMIN</title>
     <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
 
-  <body>
-    
+  <body style="background: #feffff; /* Old browsers */
+background: -moz-linear-gradient(top, #feffff 0%, #ddf1f9 32%, #a0d8ef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #feffff 0%,#ddf1f9 32%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #feffff 0%,#ddf1f9 32%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+height:calc(100vh);
+width:100%;">
+  <%= render 'layouts/header' %>
   <%= render 'layouts/flash' %>
     
     <!-- <p class="navbar-text pull-right">

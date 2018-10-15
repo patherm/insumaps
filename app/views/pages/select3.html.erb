@@ -1,0 +1,36 @@
+<div class='container'>
+	<div class="middle">
+  		<h2>Selecionar Cidade e Distribuidora </h2>
+  	</div>
+</div>
+  <div class="panel-body">
+	<div class="middle">
+		<div class="container-fluid">
+		<div class="col-lg-4 center-block">
+			<%= fields_for (@cidade) do |f| %>
+
+		    	<%= f.select :nome3, options_for_select(Cidade.order(:nome).map{|e| [e.nome, e.id]}), {:prompt=>"Selecione a Cidade", :required => true}, class:"form-control", style: "width:205px" %><br/>		
+			
+
+			<%= f.fields_for :distribuidoras do |l| %>
+	      			<%= l.grouped_collection_select :nome, Cidade.order(:nome), :distribuidoras, :nome, :id, :nome, {:prompt=>"Selecione a Distribuidora", :required => true}, class:"form-control", style: "width:205px" %>
+
+			<% end %><br/>
+			<p>
+		    <div class="actions">
+		      	<%= f.submit 'Ir', class:'btn btn-primary', id:'submito' %>
+		    </div>  
+		</p>
+		</div>
+	</div>
+
+		
+
+		<% end %>
+	</div>
+	</center>
+</div>
+  </div>
+</div>
+</div>
+

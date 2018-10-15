@@ -1,0 +1,31 @@
+<div class='container'>
+	<div class="middle">
+  	<h2>Selecionar Cidade da Distribuidora </h2>
+  </div>
+
+  </div>
+  <div class="panel-body">
+	
+	<div class="middle">
+
+		<%= fields_for (@cidade) do |f| %>
+
+		<div class="col-lg-4 center-block">
+		     <%= f.select :nome2, options_for_select(Cidade.order(:nome).map{|e| [e.nome, e.id]}), {:prompt=>"Selecione a Cidade", :required => true}, class:"form-control", style: "width:200px" %>		  
+		</div>
+
+		<!-- <p>
+		      <div class="actions">
+		                  <%= f.submit class:'btn btn-primary' %>
+		                  <%= link_to 'Cancelar', admin_path, class: 'btn btn-default' %>
+		      </div>  
+		</p> -->
+
+		<% end %>
+	</div>
+	</center>
+</div>
+  </div>
+</div>
+</div>
+

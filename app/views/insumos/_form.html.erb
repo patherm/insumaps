@@ -1,0 +1,39 @@
+<%= form_for ([@cidade, @distribuidora, @insumo]), html: { multipart: true} do |f| %>
+
+<%= render 'layouts/errors' , object: @insumo %>
+
+<p class="form-group">
+  <%= f.label :Nome %></br>
+  <%= f.text_field :tipo, class:"form-control" %>
+</p>
+
+<p class="form-group">
+  <%= f.label :Preco %></br>
+  <%= f.number_field :preco, class:"form-control" %>
+</p>
+
+<p class="form-group">
+  <%= f.label :Latitude %></br>
+  <%= f.number_field :latitude, class:"form-control" %>
+</p>
+<p class="form-group">
+  <%= f.label :Longitude %></br>
+  <%= f.number_field :longitude, class:"form-control" %>
+</p>
+<p class="form-group">
+  <%= f.label :Descrição %></br>
+  <%= f.text_area :descricao, class:"form-control" %>
+</p>
+<p class="form-group">
+  <%= f.label :Foto %></br>
+  <%= f.file_field :foto %>
+</p>
+
+<p>
+      <div class="actions">
+                  <%= f.submit class:'btn btn-primary' %>
+                  <%= link_to 'Cancelar', admin_path, class: 'btn btn-default' %>
+      </div>  
+</p>
+
+<% end %>

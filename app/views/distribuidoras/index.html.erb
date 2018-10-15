@@ -1,0 +1,34 @@
+<center>
+<div class="container-fluid">
+	<% if @cidade.distribuidoras.size > 0 %>
+		<div class="col-md-10">
+	 		<h2>Distribuidora Cadastradas</h2>
+		</div>
+		<div class="col-md-10">
+			<% @cidade.distribuidoras.each do |dist| %>	
+				<div class="span6">
+					<p><h3 class="text-left"><%= dist.nome %></h3></p>
+						<td class="text-center">
+							<%= link_to edit_cidade_distribuidora_path(@cidade, dist), class:'btn btn-link' do %>
+	                    		<i class="glyphicon glyphicon-edit"> Editar</i>
+	                  		<% end %>
+	                  		<%= link_to cidade_distribuidora_path(@cidade, dist), method: :delete, data:{confirm: "Deseja remover esse Registro?"}, class:'btn btn-link' do %>
+	                    		<i class="glyphicon glyphicon-remove-sign"> Remover</i>
+	                  		<% end %>
+              			</td>
+				</div>
+			<% end %>
+		</div>
+	<% else %>
+		<div class="jumbotron">
+			<h3>Não há Distribuidoras cadastradas!</h3>
+		</div>
+	<% end %>
+		<div class="col-md-8">
+			<p><%= link_to admin_path, class:'btn btn-link' do %>
+	 			<i class="glyphicon glyphicon-home"> Voltar</i>
+				<% end %>
+			</p>
+		</div>
+</div>
+</center>

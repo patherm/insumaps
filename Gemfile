@@ -24,15 +24,20 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'compass-rails','~> 3.0.2'
+gem 'webpack-rails', '~> 0.9.1'
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'mini_magick', '~> 4.8'
+#gem 'graphicsmagick', '~> 1.0', '>= 1.0.5'
+gem 'image_magick', '~> 0.1.9'
+
 #gem 'bootstrap', '~> 4.0.0.alpha6'
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

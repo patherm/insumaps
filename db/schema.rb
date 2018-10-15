@@ -10,16 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612191451) do
+ActiveRecord::Schema.define(version: 20180917000443) do
 
   create_table "cidades", force: :cascade do |t|
     t.string "nome"
     t.string "uf"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "insumo_id"
+    t.index ["insumo_id"], name: "index_cidades_on_insumo_id"
+  end
+
+  create_table "distribuidoras", force: :cascade do |t|
+    t.string "nome"
+    t.float "latitude"
+    t.float "longitude"
+    t.text "descricao"
+    t.string "icone"
+    t.string "foto"
+    t.integer "cidade_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "insumo_id"
+    t.index ["cidade_id"], name: "index_distribuidoras_on_cidade_id"
+    t.index ["insumo_id"], name: "index_distribuidoras_on_insumo_id"
+  end
+
+  create_table "insumos", force: :cascade do |t|
+    t.string "tipo"
+    t.decimal "preco"
+    t.text "descricao"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "icone"
+    t.string "foto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -32,7 +62,7 @@ ActiveRecord::Schema.define(version: 20180612191451) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

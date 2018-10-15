@@ -1,0 +1,75 @@
+<nav class="navbar navbar-light" role="navigation" style="background: #feffff; /* Old browsers */
+background: -moz-linear-gradient(top, #feffff 0%, #ddf1f9 32%, #a0d8ef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #feffff 0%,#ddf1f9 32%,#a0d8ef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #feffff 0%,#ddf1f9 32%,#a0d8ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */" >
+  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to ' Home', root_path, class:'navbar-brand glyphicon glyphicon-home' %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+  <% if user_signed_in? %>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cidades <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Cadastrar', new_cidade_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Atualizar/Remover', cidades_path %></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Distribuidoras <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="\pages\select">Cadastrar</a></li>
+            
+            <li role="separator" class="divider"></li>
+            <li><a href="\pages\select2">Atualizar\Remover</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Insumos e Serviços <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="\pages\select3">Cadastrar</a></li>
+          </ul>
+        </li>
+      </ul>
+     <!--  <form class="navbar-form navbar-left" role="search">
+        <div class="input-group">
+          <%= text_field_tag :keywords,
+          params[:keywords],
+          autocomplete: "off",
+          placeholder: "Cidade, distribuidora ...",
+          class: 'form-control typeahead',
+          autofocus: true,
+          id: 'lists_search' %>
+        </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+      </form> -->
+  <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+            <div class="navbar-brand"><small>Logado como <strong><%= current_user.username %></strong></small></div>
+            <%= link_to  ' Perfil',  edit_user_registration_path, class:'navbar-brand glyphicon glyphicon-user ' %>
+            <%= link_to " Sair ", destroy_user_session_path, method: :delete, class:'navbar-brand glyphicon glyphicon-off' %>
+          <% else %>
+            <!--<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |-->
+            <%= link_to " Acessar", new_user_session_path, class:'navbar-brand glyphicon glyphicon-log-in'  %>
+          <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+  </div>
+</div>

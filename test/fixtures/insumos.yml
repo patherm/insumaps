@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  preco: 9.99
+  descricao: MyText
+  latitude: 1.5
+  longitude: 1.5
+  icone: MyString
+  foto: MyString
+
+two:
+  tipo: MyString
+  preco: 9.99
+  descricao: MyText
+  latitude: 1.5
+  longitude: 1.5
+  icone: MyString
+  foto: MyString

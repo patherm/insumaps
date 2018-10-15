@@ -8,6 +8,14 @@
  </article>
 </div>
 
+<%= link_to new_cidade_distribuidora_path(@cidade), class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-tower"> Cadastrar Distribuidora</i>
+<% end %>
+
+<%= link_to cidade_distribuidoras_path(@cidade), class:'btn btn-link' do %>
+ 	<i class="glyphicon glyphicon-tower"> Atualizar Distribuidora</i>
+<% end %>
+
 <%= link_to cidades_path, class:'btn btn-link' do %>
  	<i class="glyphicon glyphicon-home"> Voltar</i>
 <% end %>

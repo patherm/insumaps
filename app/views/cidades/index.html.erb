@@ -7,7 +7,15 @@
 		<div class="col-md-10">
 			<% @cidades.each do |cidade| %>
 				<div class="span6">
-					<p><h3 class="text-left"><%= link_to cidade.nome, cidade %></h3></p>
+					<p><h3 class="text-left"><%= cidade.nome %></h3></p>
+						<td class="text-center">
+							<%= link_to edit_cidade_path(cidade), class:'btn btn-link' do %>
+	                    		<i class="glyphicon glyphicon-edit"> Editar</i>
+	                  		<% end %>
+	                  		<%= link_to cidade_path(cidade), method: :delete, data:{confirm: "Deseja remover esse Registro?"}, class:'btn btn-link' do %>
+	                    		<i class="glyphicon glyphicon-remove-sign"> Remover</i>
+	                  		<% end %>
+              			</td>
 		 			<!-- <h3>Uf: <%= cidade.uf %></h3> -->
 				</div>
 			<% end %>
